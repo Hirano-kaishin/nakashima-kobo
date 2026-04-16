@@ -1273,11 +1273,11 @@ button {
   }
 
   .hero__watermark {
-    width: 140px;
-    right: 5%;
-    top: 15%;
-    transform: none;
-    opacity: 0.5;
+    display: none;
+  }
+
+  .hero__brand {
+    display: none;
   }
 
   /* ヒーロー スマホ対応 */
