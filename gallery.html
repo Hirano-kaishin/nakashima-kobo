@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ナカシマ工房の制作実績。カウンター・テーブル、棚・収納、デスク、造作・内装など、完全オーダーメイド家具のギャラリー。">
+  <title>制作実績 | ナカシマ工房</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Old+Mincho:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <header class="header scrolled" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/IMG_6795.jpg" alt="ナカシマ工房" class="header__logo-img">
+        <div class="header__logo-text">
+          <span class="logo-jp">ナカシマ工房</span>
+          <span class="logo-en">NAKASHIMA CRAFT</span>
+        </div>
+      </a>
+      <nav class="header__nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html#about" class="nav__link">職人の話</a></li>
+          <li><a href="gallery.html" class="nav__link">ギャラリー</a></li>
+          <li><a href="index.html#process" class="nav__link">制作の流れ</a></li>
+          <li><a href="index.html#contact" class="nav__link contact-btn">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ギャラリーページ -->
+  <section class="gallery gallery--page" id="gallery">
+    <div class="gallery__inner">
+      <div class="gallery__header">
+        <p class="section-eyebrow">GALLERY</p>
+        <h2 class="section-title section-title--center">制作実績</h2>
+        <p class="gallery__desc">これまでに制作した家具の一部をご紹介します。<br>すべてが一点もの。お客様の想いが込められた作品です。</p>
+      </div>
+
+      <!-- フィルター -->
+      <div class="gallery__filter">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="counter">カウンター・テーブル</button>
+        <button class="filter-btn" data-filter="shelf">棚・収納</button>
+        <button class="filter-btn" data-filter="desk">デスク</button>
+        <button class="filter-btn" data-filter="other">造作・内装</button>
+      </div>
+
+      <div class="gallery__grid" id="galleryGrid">
+
+        <!-- カウンター・テーブル -->
+        <div class="gallery-item reveal-up" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6765.JPG" alt="ルーバーカウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">ルーバー天井カウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6784.JPG" alt="バーカウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">無垢材バーカウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6778.JPG" alt="カフェテーブル" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">カフェ用ダイニングテーブル</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6741.JPG" alt="店舗カウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">店舗カウンター収納</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6742.JPG" alt="店舗カウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">御影石天板カウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6757.JPG" alt="キッチンカウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">キッチンカウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" data-category="counter">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6759.JPG" alt="ラウンドテーブル" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">ラウンドテーブル</h3>
+          </div>
+        </div>
+
+        <!-- 棚・収納 -->
+        <div class="gallery-item reveal-up delay-1" data-category="shelf">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6774.JPG" alt="壁面本棚" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">壁面収納棚</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="shelf">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6751.JPG" alt="格子棚" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">大型格子シェルフ</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" data-category="shelf">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6738.JPG" alt="サイドボード" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">オーク材サイドボード</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="shelf">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6748.JPG" alt="本棚" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">窓下オープン本棚</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="shelf">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6756.JPG" alt="吊戸棚" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">キッチン吊戸棚</h3>
+          </div>
+        </div>
+
+        <!-- デスク -->
+        <div class="gallery-item reveal-up" data-category="desk">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6749.JPG" alt="壁付デスク" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">壁付カウンターデスク</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="desk">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6772.JPG" alt="造作カウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">造作カウンター収納</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="desk">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6783.JPG" alt="デスク" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">ウォールナット調デスク</h3>
+          </div>
+        </div>
+
+        <!-- 造作・内装 -->
+        <div class="gallery-item reveal-up" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6766.JPG" alt="ルーバーカウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">ルーバー装飾カウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6763.JPG" alt="厨房カウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">店舗厨房カウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6767.JPG" alt="TVボード" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">フロートTVボード</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6775.JPG" alt="ドレッサー" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">造作ドレッサー</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6761.JPG" alt="手洗いカウンター" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">無垢材手洗いカウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6769.JPG" alt="壁付キャビネット" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">壁付キャビネット</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6777.JPG" alt="木の間" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">総無垢材 書斎空間</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-1" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6781.JPG" alt="洗面台" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">造作洗面カウンター</h3>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-up delay-2" data-category="other">
+          <div class="gallery-item__img">
+            <img src="images/IMG_6746.JPG" alt="小上がり収納" loading="lazy">
+            <div class="gallery-item__overlay"><span class="overlay-text">詳細を見る</span></div>
+          </div>
+          <div class="gallery-item__info">
+            <h3 class="gallery-item__name">小上がり引出し収納</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="gallery__note">
+        <p>※価格はサイズ・素材・仕上げにより変動します。まずはお気軽にご相談ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__brand-logo">
+          <img src="images/IMG_6796.jpg" alt="ナカシマ工房" class="footer__logo-img">
+          <div>
+            <span class="logo-jp">ナカシマ工房</span>
+            <span class="logo-en">NAKASHIMA CRAFT</span>
+          </div>
+        </div>
+        <p class="footer__tagline">手仕事の家具 / Handcraft Furniture</p>
+      </div>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="index.html#about">職人の話</a></li>
+          <li><a href="gallery.html">ギャラリー</a></li>
+          <li><a href="index.html#process">制作の流れ</a></li>
+          <li><a href="index.html#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="footer__sns">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 ナカシマ工房. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
