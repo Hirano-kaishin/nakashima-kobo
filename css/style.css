@@ -185,8 +185,8 @@ button {
 .header__logo-img {
   width: 36px;
   height: 36px;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .header__logo-text {
@@ -332,6 +332,23 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+
+.hero__watermark {
+  position: absolute;
+  left: 620px;
+  bottom: 6rem;
+  z-index: 2;
+  width: 100px;
+}
+
+.hero__watermark img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  filter: brightness(0) invert(1);
 }
 
 .hero__content {
@@ -339,10 +356,35 @@ button {
 }
 
 
+.hero__brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__icon {
+  width: 70px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.hero__brand-name {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.15em;
+  padding-left: 0.15em;
+}
+
 .hero__eyebrow {
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.4em;
+  padding-left: 0.2em;
   color: var(--color-gold);
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -362,6 +404,10 @@ button {
   color: var(--color-gold);
 }
 
+.title-period {
+  margin-right: -0.5em;
+}
+
 .hero__subtitle {
   font-family: var(--font-mincho);
   font-size: clamp(0.85rem, 1.2vw, 1rem);
@@ -374,6 +420,7 @@ button {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 
@@ -431,43 +478,45 @@ button {
 
 /* ── About ── */
 .about {
-  padding: var(--spacing-xl) 0;
+  position: relative;
   overflow: hidden;
+  padding: var(--spacing-xl) 0;
+}
+
+.about__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.about__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(15, 11, 8, 0.75);
 }
 
 .about__inner {
-  max-width: var(--max-width);
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 0 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
+  padding: 0 3rem;
+  text-align: center;
 }
 
-.about__image-wrap {
-  position: relative;
+.about__content {
+  /* テキスト中央 */
 }
 
-.about__image-placeholder {
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  position: relative;
-}
-
-.image-placeholder-inner {
-  width: 100%;
-  height: 100%;
-}
-
-.about__image-frame {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: -20px;
-  bottom: -20px;
-  border: 1px solid var(--color-gold-dk);
-  z-index: -1;
+.about__photo {
+  margin-top: 3rem;
+  /* 職人の画像用スペース */
 }
 
 .about__message {
@@ -492,9 +541,13 @@ button {
 .about__signature {
   display: flex;
   flex-direction: column;
-  border-left: 2px solid var(--color-gold);
-  padding-left: 1rem;
+  align-items: center;
+  border-left: none;
+  border-top: 1px solid var(--color-gold);
+  border-bottom: 1px solid var(--color-gold);
+  padding: 1rem 0;
   margin-bottom: 2rem;
+  display: inline-flex;
 }
 
 .signature-name {
@@ -551,6 +604,7 @@ button {
   position: relative;
   transition: all var(--transition);
   overflow: hidden;
+  text-align: center;
 }
 
 .feature-card::before {
@@ -579,7 +633,7 @@ button {
   width: 52px;
   height: 52px;
   color: var(--color-gold);
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem;
 }
 
 .feature-card__title {
@@ -792,10 +846,10 @@ button {
 }
 
 .process-step {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 2rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 2rem 0;
 }
 
@@ -806,6 +860,7 @@ button {
   color: var(--color-gold);
   line-height: 1;
   opacity: 0.6;
+  margin-bottom: 0.75rem;
 }
 
 .step-content h3 {
@@ -826,7 +881,7 @@ button {
   width: 1px;
   height: 2rem;
   background: var(--color-line);
-  margin-left: 40px;
+  margin: 0 auto;
 }
 
 /* ── Instagram ── */
@@ -1080,8 +1135,8 @@ button {
 .footer__logo-img {
   width: 48px;
   height: 48px;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .footer__tagline {
@@ -1170,11 +1225,6 @@ button {
 
 /* ── レスポンシブ ── */
 @media (max-width: 1024px) {
-  .about__inner {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
   .features__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1222,6 +1272,14 @@ button {
     z-index: 100;
   }
 
+  .hero__watermark {
+    display: none;
+  }
+
+  .hero__brand {
+    display: none;
+  }
+
   /* ヒーロー スマホ対応 */
   .hero {
     height: auto;
@@ -1260,7 +1318,7 @@ button {
 
   .hero__cta {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero__eyebrow {
@@ -1291,7 +1349,6 @@ button {
   }
 
   .about__inner {
-    gap: 2rem;
     padding: 0 1.5rem;
   }
 
