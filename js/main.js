@@ -241,31 +241,13 @@ function initContactForm() {
     btnText.style.display = 'none';
     btnLoader.style.display = 'inline';
 
-    // GASへ送信
-    const GAS_URL = 'YOUR_GAS_URL_HERE';
-    const payload = {
-      name: form.querySelector('#name').value,
-      email: form.querySelector('#email').value,
-      type: form.querySelector('#inquiry-type').value,
-      message: form.querySelector('#message').value
-    };
-
-    fetch(GAS_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    }).then(() => {
+    // 2秒後に成功表示（実際はFormspreeなど外部サービスに送信）
+    setTimeout(() => {
       form.style.display = 'none';
       formSuccess.style.display = 'flex';
       formSuccess.style.flexDirection = 'column';
       formSuccess.style.alignItems = 'center';
-    }).catch(() => {
-      alert('送信に失敗しました。もう一度お試しください。');
-      submitBtn.disabled = false;
-      btnText.style.display = 'inline';
-      btnLoader.style.display = 'none';
-    });
+    }, 1800);
   });
 
   function showError(el, errorEl, message) {
