@@ -242,7 +242,7 @@ function initContactForm() {
     btnLoader.style.display = 'inline';
 
     // GASへ送信
-    const GAS_URL = 'YOUR_GAS_URL_HERE';
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbyZ9HPjtPMw5WdxeMd_LVB5GbLQrOSQ8LTcBkap59j4yYxyKuhea16FAdEabo0_t8BXHQ/exec';
     const payload = {
       name: form.querySelector('#name').value,
       email: form.querySelector('#email').value,

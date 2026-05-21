@@ -292,7 +292,7 @@ button {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 
@@ -311,12 +311,18 @@ button {
   inset: 0;
   z-index: 1;
   background:
+    radial-gradient(
+      ellipse at 50% 55%,
+      rgba(15, 11, 8, 0.25) 0%,
+      rgba(15, 11, 8, 0.55) 45%,
+      rgba(15, 11, 8, 0.85) 80%
+    ),
     linear-gradient(
       to bottom,
-      rgba(15, 11, 8, 0.4) 0%,
-      rgba(15, 11, 8, 0.3) 40%,
-      rgba(15, 11, 8, 0.6) 65%,
-      rgba(15, 11, 8, 0.95) 88%,
+      rgba(15, 11, 8, 0.35) 0%,
+      rgba(15, 11, 8, 0.2) 35%,
+      rgba(15, 11, 8, 0.6) 75%,
+      rgba(15, 11, 8, 0.95) 92%,
       var(--color-bg) 100%
     );
 }
@@ -326,12 +332,12 @@ button {
   z-index: 2;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 3rem 5rem;
+  padding: 0 3rem;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -360,34 +366,43 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .hero__icon {
-  width: 70px;
+  width: clamp(80px, 8vw, 120px);
   height: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
+  filter:
+    brightness(0) invert(1)
+    blur(0.4px)
+    drop-shadow(0 0 1px rgba(255, 255, 255, 0.35));
+  opacity: 0.92;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .hero__brand-name {
   font-family: 'Zen Old Mincho', serif;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 900;
   color: #fff;
-  letter-spacing: 0.15em;
-  padding-left: 0.15em;
+  letter-spacing: 0.18em;
+  padding-left: 0.18em;
+  line-height: 1;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
 }
 
 .hero__eyebrow {
-  font-size: 0.7rem;
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
   font-weight: 400;
-  letter-spacing: 0.4em;
-  padding-left: 0.2em;
+  letter-spacing: 0.5em;
+  padding-left: 0.25em;
   color: var(--color-gold);
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.25rem;
   display: block;
 }
 
@@ -410,10 +425,10 @@ button {
 
 .hero__subtitle {
   font-family: var(--font-mincho);
-  font-size: clamp(0.85rem, 1.2vw, 1rem);
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.2em;
-  margin-bottom: 2.5rem;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.25em;
+  margin-bottom: 3rem;
 }
 
 .hero__cta {
@@ -1277,7 +1292,17 @@ button {
   }
 
   .hero__brand {
-    display: none;
+    gap: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__icon {
+    width: 56px;
+  }
+
+  .hero__brand-name {
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    letter-spacing: 0.12em;
   }
 
   /* ヒーロー スマホ対応 */
@@ -1293,27 +1318,30 @@ button {
 
   .hero__gradient {
     background:
+      radial-gradient(
+        ellipse at 50% 50%,
+        rgba(15, 11, 8, 0.35) 0%,
+        rgba(15, 11, 8, 0.65) 60%,
+        rgba(15, 11, 8, 0.9) 100%
+      ),
       linear-gradient(
         to bottom,
-        rgba(15, 11, 8, 0.5) 0%,
-        rgba(15, 11, 8, 0.4) 40%,
-        rgba(15, 11, 8, 0.7) 65%,
-        rgba(15, 11, 8, 0.95) 85%,
+        rgba(15, 11, 8, 0.45) 0%,
+        rgba(15, 11, 8, 0.3) 40%,
+        rgba(15, 11, 8, 0.7) 70%,
+        rgba(15, 11, 8, 0.95) 88%,
         var(--color-bg) 100%
       );
   }
 
   .hero__inner {
-    padding: 0 1.5rem 3rem;
-  }
-
-  .hero__title {
-    font-size: clamp(2rem, 8vw, 3rem);
+    padding: 0 1.5rem;
   }
 
   .hero__subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 2rem;
   }
 
   .hero__cta {
@@ -1322,8 +1350,9 @@ button {
   }
 
   .hero__eyebrow {
-    font-size: 0.6rem;
-    margin-bottom: 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    margin-bottom: 1.25rem;
   }
 
   /* その他 スマホ対応 */
